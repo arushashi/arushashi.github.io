@@ -4,92 +4,240 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shashidhar Panchanana | Principal SRE</title>
-<meta name="description" content="Portfolio of Shashidhar Panchanana, Principal Systems Development Engineer (Principal SRE): observability, Kubernetes and Azure.">
+<meta name="description" content="Shashidhar Panchanana: Principal Site Reliability Engineer with 18 years of experience in production reliability, observability, Kubernetes and Azure.">
 <style>
-:root{--bg:#f7f8fa;--card:#fff;--text:#1b2430;--muted:#5b6675;--accent:#0b6bcb;--border:#e3e7ee}
-@media (prefers-color-scheme:dark){:root{--bg:#0f141b;--card:#171e28;--text:#e8edf4;--muted:#9aa7b8;--accent:#5aa9ff;--border:#263040}}
+:root{--bg:#f6f8fb;--card:#fff;--text:#1a2433;--muted:#5a6678;--accent:#0b63c5;--accent2:#12a594;--border:#e2e7ef;--hero1:#0b63c5;--hero2:#0a3d7a}
+@media (prefers-color-scheme:dark){:root{--bg:#0e131a;--card:#161d27;--text:#e7ecf3;--muted:#9aa7b8;--accent:#5aa9ff;--accent2:#35d0bb;--border:#263040;--hero1:#103d73;--hero2:#0b1f3a}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:860px;margin:0 auto;padding:48px 16px 64px}
-h1{font-size:2rem;margin:0 0 4px}
-h2{font-size:1.15rem;margin:40px 0 12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.role{font-size:1.1rem;color:var(--accent);margin:0 0 8px}
-.meta{color:var(--muted);margin:0 0 16px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:var(--accent)}
-.btn{display:inline-block;padding:8px 14px;border:1px solid var(--accent);border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 8px 8px 0}
-.btn.primary{background:var(--accent);color:var(--bg)}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;gap:18px;overflow-x:auto;padding:10px 16px;white-space:nowrap}
+nav a{text-decoration:none;color:var(--muted);font-size:.92rem;font-weight:600}
+nav a:hover{color:var(--accent)}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;padding:64px 0 56px}
+.hero h1{font-size:clamp(2rem,6vw,2.8rem);margin:0 0 6px;line-height:1.15}
+.hero .role{font-size:1.2rem;opacity:.95;margin:0 0 6px}
+.hero .loc{opacity:.8;margin:0 0 20px}
+.hero p.lead{max-width:640px;opacity:.95;margin:0 0 24px}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 8px 8px 0;border:1px solid var(--accent);color:var(--accent)}
+.hero .btn{border-color:rgba(255,255,255,.6);color:#fff}
+.hero .btn.primary{background:#fff;color:#0a3d7a;border-color:#fff}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:-32px;position:relative}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.stat b{display:block;font-size:1.7rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.85rem}
+section{padding-top:44px}
+h2{font-size:1.5rem;margin:0 0 18px}
+h2::after{content:"";display:block;width:44px;height:3px;background:var(--accent2);margin-top:6px;border-radius:2px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
 .card h3{margin:0 0 6px;font-size:1.05rem}
 .card p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
-.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
-.tags li{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:.9rem}
-ul.certs{padding-left:20px;margin:0}
-footer{margin-top:48px;color:var(--muted);font-size:.9rem}
+.timeline{border-left:2px solid var(--border);margin-left:6px;padding-left:22px}
+.job{position:relative;margin-bottom:26px}
+.job::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.job h3{margin:0;font-size:1.1rem}
+.job .co{color:var(--accent);font-weight:600}
+.job .when{color:var(--muted);font-size:.88rem;margin:0 0 8px}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:4px}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;margin-top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 14px;list-style:none}
+.tags li{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:4px 13px;font-size:.88rem}
+.group{font-weight:700;margin:14px 0 8px;color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;padding:0;margin:0;list-style:none}
+.certs li{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:8px;padding:10px 14px}
+.certs small{display:block;color:var(--muted)}
+footer{margin:56px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <h1>Shashidhar Panchanana</h1>
-    <p class="role">Principal Systems Development Engineer (Principal SRE)</p>
-    <p class="meta">Bengaluru, India</p>
-    <p>Site reliability engineer focused on application and production support, observability and Kubernetes on Azure. I work on incident response, monitoring and automation.</p>
-    <a class="btn primary" href="https://www.linkedin.com/in/shashidhar-panchanana/">LinkedIn</a>
+<nav><div class="wrap">
+  <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#contact">Contact</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Shashidhar Panchanana</h1>
+  <p class="role">Principal Systems Development Engineer (Principal SRE)</p>
+  <p class="loc">Bengaluru, India</p>
+  <p class="lead">18 years of keeping production systems reliable, from server support to leading major-incident response and SRE practice for 50+ services on Azure and Kubernetes.</p>
+  <a class="btn primary" href="https://www.linkedin.com/in/shashidhar-panchanana/">LinkedIn</a>
+  <a class="btn" href="https://github.com/arushashi">GitHub</a>
+  <a class="btn" href="#projects">See projects</a>
+</div></header>
+
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><b>18+</b><span>years in IT</span></div>
+    <div class="stat"><b>50+</b><span>services under my reliability</span></div>
+    <div class="stat"><b>50+</b><span>apps migrated to Azure / K8s</span></div>
+    <div class="stat"><b>&lt; 1 hr</b><span>DR recovery time (RTO)</span></div>
+    <div class="stat"><b>15+</b><span>engineers mentored</span></div>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a Principal Site Reliability Engineer who started in desktop and server support in 2008 and grew through Windows infrastructure, Microsoft enterprise support and application production support into SRE. Today I lead reliability for customer-facing, device-telemetry, data-platform and internal services, run P1/P2 major-incident bridges, and introduced SLI/SLO and error-budget practice that several platform teams adopted.</p>
+    <p>I care about observability over plain monitoring, automation over manual recovery, and blameless postmortems that lead to real fixes. Recently I have been monitoring agentic AI applications (RAG, pgvector, LLMs) and building AI agents for operations.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+
+      <div class="job">
+        <h3>Principal Systems Development Engineer (Principal SRE)</h3>
+        <p class="when">Jul 2022 - Present &middot; India</p>
+        <ul>
+          <li>Lead reliability for 50+ customer-facing, device-telemetry, data-platform and internal services on Azure and 5-20 Kubernetes clusters (AKS and on-premises).</li>
+          <li>Lead P1/P2 major incident (MIM) bridges, brief executives and drive RCA and CAPA.</li>
+          <li>Introduced SRE practice (SLI/SLO, error budgets, standard incident and postmortem workflow) adopted by multiple platform teams; mentored 15+ engineers.</li>
+          <li>Key contributor to migrating 50+ applications from on-premises to Azure and Kubernetes; designed DR with RTO under 1 hour.</li>
+          <li>Built Dynatrace and Grafana dashboards, DQL queries and alerts for 10+ applications, cutting incident detection from hours to minutes.</li>
+          <li>Built alert-triggered auto-healing in PowerShell and Python that restarts failed services automatically.</li>
+          <li>Monitor agentic AI applications (RAG, pgvector, LLMs) and built AI agents for operations with Python, Claude Code and Dynatrace Davis AI.</li>
+          <li>Own end-to-end application and production support: triage, incident, problem and change management under ITIL, and Non-Prod/Prod releases through Azure DevOps and GitHub CI/CD pipelines.</li>
+          <li>Own network dependencies: firewall (FTDR), F5 load balancer, DNS and Akamai WAF/CDN changes; troubleshoot connectivity, TLS and latency issues.</li>
+          <li>Security champion for 20+ applications: vulnerability management, Windows/Linux patching, and automated rotation of TLS certificates, SAS keys and SPN secrets with zero expiry-related outages.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Senior Systems Development Engineer</h3>
+        <p class="when">Jul 2017 - Jul 2022 &middot; Bengaluru</p>
+        <ul>
+          <li>Led production operations and application support for 10-30 enterprise applications on Azure, Windows and Linux: incident response, root cause analysis and on-call.</li>
+          <li>Troubleshot complex infrastructure, application, networking and SSL/PKI issues across multi-tier applications, restoring services within SLOs.</li>
+          <li>Owned the production lifecycle: patching, upgrades, certificates and vulnerability remediation.</li>
+          <li>Reduced operational toil with PowerShell and Python automation.</li>
+          <li>Contributed to the first phases of migrating on-premises applications to Azure and Kubernetes.</li>
+          <li>Built monitoring and alerting for early detection; drove capacity planning and performance tuning; wrote runbooks and SOPs; partnered with development, QA and security on releases.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Systems Programmer &middot; <span class="co">Intel Corporation</span></h3>
+        <p class="when">Mar 2015 - Nov 2016 &middot; Bengaluru</p>
+        <ul>
+          <li>Designed, built and supported enterprise infrastructure for business-critical internal and external applications, including application packaging and deployment.</li>
+          <li>Designed DMZ and non-DMZ architectures using NLB, SAN, Windows Server and SQL Server clusters; planned server capacity; implemented firewall (FTDR) configurations.</li>
+          <li>Worked extensively in ITIL Change, Incident, Problem and ECAB processes; monitored with New Relic and SCOM; provided on-call production support.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Senior Server Support Engineer &middot; <span class="co">Microsoft</span></h3>
+        <p class="when">Nov 2013 - Sep 2014 &middot; Bengaluru</p>
+        <ul>
+          <li>Advanced support for enterprise customers on Windows Server (NT to 2008 R2) and core infrastructure services.</li>
+          <li>Resolved failover cluster failures, BSOD, no-boot and registry corruption, Hyper-V, Remote Desktop Services, backup and restore (VSS, System State) issues.</li>
+          <li>Diagnosed CPU, memory and performance problems using Perfmon, Netmon, Poolmon and Xperf; troubleshot COM/DCOM, WMI, RPC, WinRM and Windows Installer; wrote troubleshooting guides.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Senior Support Engineer &middot; <span class="co">Frontier Business Systems</span></h3>
+        <p class="when">Aug 2012 - May 2013 &middot; Bengaluru</p>
+        <ul>
+          <li>Led server migrations from Windows 2003 to 2008 and 2008 to 2012; managed patching, incident and change management.</li>
+          <li>Installed and supported Exchange, SharePoint, Lync, SQL Server, ESXi and Hyper-V (including P2V/V2P); supported AWS and Azure cloud servers; delivered uptime and health reports to clients.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <details>
+          <summary>Earlier roles (2008 - 2012)</summary>
+          <h3 style="margin-top:14px">IT Administrator &middot; <span class="co">Replicon</span></h3>
+          <p class="when">May 2012 - Jul 2012 &middot; Bengaluru</p>
+          <ul>
+            <li>Managed Active Directory, DNS and DHCP on Windows Server 2008; administered Google Workspace and Office 365; Hyper-V and VMware VMs; network, IP telephony and AWS monitoring.</li>
+          </ul>
+          <h3 style="margin-top:14px">Server Administrator &middot; <span class="co">HAL-Edgewood Technologies</span></h3>
+          <p class="when">Feb 2011 - Apr 2012 &middot; Bengaluru</p>
+          <ul>
+            <li>Deployed Exchange, Windows Server, Active Directory, DNS, DHCP and WSUS; enforced security with Group Policy and SonicWall; patch management; ESXi 5 and vSphere setup.</li>
+          </ul>
+          <h3 style="margin-top:14px">Senior Technical Support Engineer &middot; <span class="co">Bhima Soft</span></h3>
+          <p class="when">Mar 2008 - Feb 2011 &middot; Bengaluru</p>
+          <ul>
+            <li>Managed multi-domain Active Directory with trusts, Group Policy and FortiGate UTM; enterprise antivirus and backup solutions; client OS, Outlook, network and hardware support.</li>
+          </ul>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>observability-as-code</h3>
+        <p>SLOs, multi-window burn-rate alerts and an error-budget calculator, managed as code. Vendor-neutral examples.</p>
+        <a class="btn" href="https://arushashi.github.io/observability-as-code/">Website</a>
+        <a class="btn" href="https://github.com/arushashi/observability-as-code">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>sre-runbooks</h3>
+        <p>Runbooks for high error rate, latency, pod crash loops and full disks, plus severity levels and a blameless postmortem template.</p>
+        <a class="btn" href="https://arushashi.github.io/sre-runbooks/">Website</a>
+        <a class="btn" href="https://github.com/arushashi/sre-runbooks">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>system-design-handbook</h3>
+        <p>A self-contained system design reference with worked case studies.</p>
+        <a class="btn" href="https://github.com/arushashi/system-design-handbook">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Kubernetes_notes</h3>
+        <p>My study notes on Kubernetes.</p>
+        <a class="btn" href="https://github.com/arushashi/Kubernetes_notes">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Splunk-tool-UI</h3>
+        <p>A UI project for working with Splunk.</p>
+        <a class="btn" href="https://github.com/arushashi/Splunk-tool-UI">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="group">Reliability &amp; observability</div>
+    <ul class="tags"><li>SRE</li><li>SLI / SLO / error budgets</li><li>Incident &amp; major-incident management</li><li>RCA &amp; CAPA</li><li>Dynatrace</li><li>Grafana</li><li>Splunk</li><li>New Relic</li><li>SCOM</li><li>ITIL</li></ul>
+    <div class="group">Cloud &amp; platform</div>
+    <ul class="tags"><li>Azure</li><li>AKS</li><li>Kubernetes (CKA)</li><li>Azure DevOps</li><li>GitHub CI/CD</li><li>Disaster recovery</li><li>Windows Server</li><li>Linux</li></ul>
+    <div class="group">Networking &amp; security</div>
+    <ul class="tags"><li>F5 load balancer</li><li>DNS</li><li>Akamai WAF/CDN</li><li>Firewalls (FTDR)</li><li>TLS / PKI</li><li>Vulnerability management</li></ul>
+    <div class="group">Automation &amp; AI</div>
+    <ul class="tags"><li>PowerShell</li><li>Python</li><li>Auto-healing</li><li>AI agents</li><li>Claude Code</li><li>Dynatrace Davis AI</li><li>RAG / pgvector</li></ul>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <ul class="certs">
+      <li>Dynatrace Essentials<small>Dynatrace &middot; Aug 2026 (valid to Aug 2028)</small></li>
+      <li>Certified Kubernetes Administrator (CKA)<small>The Linux Foundation &middot; Jan 2023</small></li>
+      <li>Azure Solutions Architect Expert<small>Microsoft &middot; Jun 2021</small></li>
+      <li>DevOps Engineer Expert<small>Microsoft &middot; Jun 2021</small></li>
+      <li>Azure Administrator<small>Microsoft &middot; Jun 2021</small></li>
+      <li>Azure Architect Design / Technologies<small>Microsoft &middot; Jun 2021</small></li>
+      <li>Designing and Implementing Microsoft DevOps Solutions<small>Microsoft &middot; Jun 2021</small></li>
+      <li>MCSA and MCSE<small>Microsoft</small></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>The best way to reach me is on LinkedIn.</p>
+    <a class="btn" href="https://www.linkedin.com/in/shashidhar-panchanana/">LinkedIn</a>
     <a class="btn" href="https://github.com/arushashi">GitHub</a>
-  </header>
-
-  <h2>Featured projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>observability-as-code</h3>
-      <p>SLOs, multi-window burn-rate alerts and an error-budget calculator, managed as code. Vendor-neutral examples.</p>
-      <a class="btn" href="https://arushashi.github.io/observability-as-code/">Website</a>
-      <a class="btn" href="https://github.com/arushashi/observability-as-code">GitHub</a>
-    </div>
-    <div class="card">
-      <h3>sre-runbooks</h3>
-      <p>Runbooks for high error rate, latency, pod crash loops and full disks, plus severity levels and a blameless postmortem template.</p>
-      <a class="btn" href="https://arushashi.github.io/sre-runbooks/">Website</a>
-      <a class="btn" href="https://github.com/arushashi/sre-runbooks">GitHub</a>
-    </div>
-  </div>
-
-  <h2>More on GitHub</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>system-design-handbook</h3>
-      <p>A self-contained system design reference with worked case studies.</p>
-      <a class="btn" href="https://github.com/arushashi/system-design-handbook">GitHub</a>
-    </div>
-    <div class="card">
-      <h3>Kubernetes_notes</h3>
-      <p>My study notes on Kubernetes.</p>
-      <a class="btn" href="https://github.com/arushashi/Kubernetes_notes">GitHub</a>
-    </div>
-    <div class="card">
-      <h3>Splunk-tool-UI</h3>
-      <p>A UI project for working with Splunk.</p>
-      <a class="btn" href="https://github.com/arushashi/Splunk-tool-UI">GitHub</a>
-    </div>
-  </div>
-
-  <h2>Skills</h2>
-  <ul class="tags">
-    <li>Azure</li><li>AKS</li><li>Kubernetes (CKA)</li><li>Dynatrace</li><li>Grafana</li>
-    <li>Splunk</li><li>New Relic</li><li>ITIL</li><li>PowerShell</li><li>Python</li>
-    <li>Incident management</li><li>Production support</li>
-  </ul>
-
-  <h2>Certifications</h2>
-  <ul class="certs">
-    <li>Certified Kubernetes Administrator (CKA)</li>
-    <li>Microsoft Certified: Azure Solutions Architect Expert</li>
-    <li>Microsoft Certified: DevOps Engineer Expert</li>
-    <li>Microsoft Certified: Azure Administrator Associate</li>
-  </ul>
-
-  <footer>All project content is generic example material.</footer>
+  </section>
 </main>
+
+<footer>&copy; 2026 Shashidhar Panchanana &middot; Project content is generic example material.</footer>
 </body>
 </html>
