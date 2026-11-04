@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shashidhar Panchanana | Principal SRE</title>
-<meta name="description" content="Shashidhar Panchanana: Principal Site Reliability Engineer with 18 years of experience in production reliability, observability, Kubernetes and Azure.">
+<title>Shashidhar Panchanana | Application &amp; Production Support, SRE</title>
+<meta name="description" content="Shashidhar Panchanana: Principal SRE with 18 years of experience in application and production support, incident management, observability, Kubernetes and Azure.">
 <style>
 :root{--bg:#f6f8fb;--card:#fff;--text:#1a2433;--muted:#5a6678;--accent:#0b63c5;--accent2:#12a594;--border:#e2e7ef;--hero1:#0b63c5;--hero2:#0a3d7a}
 @media (prefers-color-scheme:dark){:root{--bg:#0e131a;--card:#161d27;--text:#e7ecf3;--muted:#9aa7b8;--accent:#5aa9ff;--accent2:#35d0bb;--border:#263040;--hero1:#103d73;--hero2:#0b1f3a}}
@@ -61,9 +61,9 @@ footer{margin:56px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
 
 <header class="hero"><div class="wrap">
   <h1>Shashidhar Panchanana</h1>
-  <p class="role">Principal Systems Development Engineer (Principal SRE)</p>
+  <p class="role">Application &amp; Production Support Lead &middot; Principal SRE</p>
   <p class="loc">Bengaluru, India</p>
-  <p class="lead">18 years of keeping production systems reliable, from server support to leading major-incident response and SRE practice for 50+ services on Azure and Kubernetes.</p>
+  <p class="lead">18 years of application and production support: owning incidents, problems, changes and releases for 50+ services on Azure and Kubernetes, and using SRE practice, monitoring and automation to keep them reliable.</p>
   <a class="btn primary" href="https://www.linkedin.com/in/shashidhar-panchanana/">LinkedIn</a>
   <a class="btn" href="https://github.com/arushashi">GitHub</a>
   <a class="btn" href="#projects">See projects</a>
@@ -80,8 +80,8 @@ footer{margin:56px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
 
   <section id="about">
     <h2>About</h2>
-    <p>I am a Principal Site Reliability Engineer who started in desktop and server support in 2008 and grew through Windows infrastructure, Microsoft enterprise support and application production support into SRE. Today I lead reliability for customer-facing, device-telemetry, data-platform and internal services, run P1/P2 major-incident bridges, and introduced SLI/SLO and error-budget practice that several platform teams adopted.</p>
-    <p>I care about observability over plain monitoring, automation over manual recovery, and blameless postmortems that lead to real fixes. Recently I have been monitoring agentic AI applications (RAG, pgvector, LLMs) and building AI agents for operations.</p>
+    <p>Application and production support is my core work. I started in desktop and server support in 2008 and grew through Windows infrastructure and Microsoft enterprise support into owning production for business-critical applications. Today, as a Principal SRE, I own end-to-end support for customer-facing, device-telemetry, data-platform and internal services: triage, incident, problem and change management under ITIL, release support, and P1/P2 major-incident bridges with RCA and CAPA.</p>
+    <p>I bring SRE practice to support work: SLI/SLO and error budgets, observability instead of plain monitoring, automation (including auto-healing) instead of manual recovery, and blameless postmortems that lead to real fixes. Recently I have been monitoring agentic AI applications (RAG, pgvector, LLMs) and building AI agents for operations.</p>
   </section>
 
   <section id="experience">
@@ -92,14 +92,14 @@ footer{margin:56px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
         <h3>Principal Systems Development Engineer (Principal SRE)</h3>
         <p class="when">Jul 2022 - Present &middot; India</p>
         <ul>
-          <li>Lead reliability for 50+ customer-facing, device-telemetry, data-platform and internal services on Azure and 5-20 Kubernetes clusters (AKS and on-premises).</li>
+          <li>Own end-to-end application and production support for 50+ customer-facing, device-telemetry, data-platform and internal services: triage, incident, problem and change management under ITIL, and Non-Prod/Prod releases through Azure DevOps and GitHub CI/CD pipelines.</li>
+          <li>Support workloads on Azure and 5-20 Kubernetes clusters (AKS and on-premises).</li>
           <li>Lead P1/P2 major incident (MIM) bridges, brief executives and drive RCA and CAPA.</li>
           <li>Introduced SRE practice (SLI/SLO, error budgets, standard incident and postmortem workflow) adopted by multiple platform teams; mentored 15+ engineers.</li>
           <li>Key contributor to migrating 50+ applications from on-premises to Azure and Kubernetes; designed DR with RTO under 1 hour.</li>
           <li>Built Dynatrace and Grafana dashboards, DQL queries and alerts for 10+ applications, cutting incident detection from hours to minutes.</li>
           <li>Built alert-triggered auto-healing in PowerShell and Python that restarts failed services automatically.</li>
           <li>Monitor agentic AI applications (RAG, pgvector, LLMs) and built AI agents for operations with Python, Claude Code and Dynatrace Davis AI.</li>
-          <li>Own end-to-end application and production support: triage, incident, problem and change management under ITIL, and Non-Prod/Prod releases through Azure DevOps and GitHub CI/CD pipelines.</li>
           <li>Own network dependencies: firewall (FTDR), F5 load balancer, DNS and Akamai WAF/CDN changes; troubleshoot connectivity, TLS and latency issues.</li>
           <li>Security champion for 20+ applications: vulnerability management, Windows/Linux patching, and automated rotation of TLS certificates, SAS keys and SPN secrets with zero expiry-related outages.</li>
         </ul>
@@ -174,6 +174,12 @@ footer{margin:56px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
+      <div class="card">
+        <h3>Application Support Playbook</h3>
+        <p>Triage method, ITIL incident, problem and change management, escalation and bridge roles, release support and routine operations, with ready-to-use templates.</p>
+        <a class="btn" href="https://arushashi.github.io/application-support-playbook/">Website</a>
+        <a class="btn" href="https://github.com/arushashi/application-support-playbook">GitHub</a>
+      </div>
       <div class="card">
         <h3>Observability as Code</h3>
         <p>SLOs, multi-window burn-rate alerts and an error-budget calculator, managed as code. Vendor-neutral examples.</p>
@@ -278,8 +284,10 @@ footer{margin:56px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
 
   <section id="skills">
     <h2>Skills</h2>
+    <div class="group">Application &amp; production support</div>
+    <ul class="tags"><li>Application support</li><li>Production support</li><li>ITIL incident, problem &amp; change</li><li>Major-incident management</li><li>Troubleshooting &amp; RCA / CAPA</li><li>Release support (Non-Prod / Prod)</li><li>Patching &amp; certificate rotation</li><li>On-call &amp; runbooks</li></ul>
     <div class="group">Reliability &amp; observability</div>
-    <ul class="tags"><li>SRE</li><li>SLI / SLO / error budgets</li><li>Incident &amp; major-incident management</li><li>RCA &amp; CAPA</li><li>Dynatrace</li><li>Grafana</li><li>Splunk</li><li>New Relic</li><li>SCOM</li><li>ITIL</li></ul>
+    <ul class="tags"><li>SRE</li><li>SLI / SLO / error budgets</li><li>Dynatrace</li><li>Grafana</li><li>Splunk</li><li>New Relic</li><li>SCOM</li></ul>
     <div class="group">Cloud &amp; platform</div>
     <ul class="tags"><li>Azure</li><li>AKS</li><li>Kubernetes (CKA)</li><li>Azure DevOps</li><li>GitHub CI/CD</li><li>Disaster recovery</li><li>Windows Server</li><li>Linux</li></ul>
     <div class="group">Networking &amp; security</div>
